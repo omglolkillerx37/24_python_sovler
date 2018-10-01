@@ -4,9 +4,6 @@ import sys
 def main():
 
 	card = get_card()
-	
-	ez_solve(card)
-
 
 	solve(card)
 	
@@ -24,19 +21,6 @@ def get_card():
 			except:
 				pass	
 	return list(card)
-
-def ez_solve(ln):
-	mulltiply_all = lambda x: x[0] * x[1] * x[2] * x[3]
-
-	if mulltiply_all(ln) == 24 : 
-		return [24,"mulltiply all numbers "]
-		sys.exit()
-
-
-	add_all = lambda x: x[0] + x[1] + x[2] + x[3]
-	if add_all(ln) == 24:
-		return [24,"add all numbers"] 
-		sys.exit()
 
 def solve(ln):
 	
@@ -62,12 +46,12 @@ def solve(ln):
 			
 
 			if cur_num == 24:
-				print("we have found the number", cur_num, i ,j )
+				print("we have found the number", cur_num, i ,j)
 				break
 
 		break
 				
-			
+
 if __name__ == "__main__":
 	print(main())
 
